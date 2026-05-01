@@ -1,0 +1,2 @@
+This file contains database configuration and schema details for the online shop project.
+Initial setup for the Database branch.
