@@ -13,7 +13,7 @@ $stmt->execute([$_SESSION['user_id']]);
 $orders = $stmt->fetchAll();
 
 ?>
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,5 +75,4 @@ $orders = $stmt->fetchAll();
 
 </body>
 </html>
-=======
->>>>>>> 80ab4c27ba0ff1489064c97c1d683542f2bda3b5
+

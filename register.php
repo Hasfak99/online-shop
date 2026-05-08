@@ -42,10 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 80ab4c27ba0ff1489064c97c1d683542f2bda3b5
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,38 +67,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form method="POST">
         <div class="form-group">
             <label>Username</label>
-<<<<<<< HEAD
             <input type="text" name="username" value="<?php echo isset($_POST['username']) ? htmlspecialchars($_POST['username']) : ''; ?>" onpaste="return false;" oncopy="return false;" oncut="return false;" required>
-=======
-            <input type="text" name="username" value="<?php echo isset($_POST['username']) ? htmlspecialchars($_POST['username']) : ''; ?>" required>
->>>>>>> 80ab4c27ba0ff1489064c97c1d683542f2bda3b5
         </div>
 
         <div class="form-group">
             <label>Email Address</label>
-<<<<<<< HEAD
             <input type="email" name="email" value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>" onpaste="return false;" oncopy="return false;" oncut="return false;" required>
-=======
-            <input type="email" name="email" value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>" required>
->>>>>>> 80ab4c27ba0ff1489064c97c1d683542f2bda3b5
         </div>
 
         <div class="form-group">
             <label>Password</label>
-<<<<<<< HEAD
             <input type="password" name="password" onpaste="return false;" oncopy="return false;" oncut="return false;" required>
-=======
-            <input type="password" name="password" required>
->>>>>>> 80ab4c27ba0ff1489064c97c1d683542f2bda3b5
         </div>
 
         <div class="form-group">
             <label>Confirm Password</label>
-<<<<<<< HEAD
             <input type="password" name="confirm_password" onpaste="return false;" oncopy="return false;" oncut="return false;" required>
-=======
-            <input type="password" name="confirm_password" required>
->>>>>>> 80ab4c27ba0ff1489064c97c1d683542f2bda3b5
         </div>
 
         <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Register</button>
@@ -116,8 +96,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 </body>
 </html>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/authentication-core-logic
->>>>>>> 80ab4c27ba0ff1489064c97c1d683542f2bda3b5

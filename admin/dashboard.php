@@ -19,10 +19,7 @@ $orders_stmt = $pdo->query("
 $recent_orders = $orders_stmt->fetchAll();
 
 ?>
-<<<<<<< HEAD
-=======
 
->>>>>>> 80ab4c27ba0ff1489064c97c1d683542f2bda3b5
 <!DOCTYPE html>
 <html lang="en">
 <head>
