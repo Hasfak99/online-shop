@@ -51,15 +51,6 @@ A full-stack e-commerce application built with **Core PHP** and **MySQL**, follo
 
 ---
 
-## 👥 Team Contribution Table
-
-| Name | Role | Contribution |
-|------|------|--------------|
-| Your Name | Full-Stack Developer | Database design, PHP Logic, UI/UX implementation. |
-| Partner Name | Database Architect | ER Diagram, Normalization, SQL scripts. |
-
----
-
 ## 📝 Academic Information
 **Institution**: UNIVERSITY OF VOCATIONAL TECHNOLOGY  
 **Module**: Technology PHP and MySQL  

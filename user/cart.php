@@ -47,6 +47,7 @@ foreach ($_SESSION['cart'] as $item) {
     $total += $item['price'] * $item['quantity'];
 }
 ?>
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -125,3 +126,5 @@ foreach ($_SESSION['cart'] as $item) {
 
 </body>
 </html>
+=======
+>>>>>>> 80ab4c27ba0ff1489064c97c1d683542f2bda3b5

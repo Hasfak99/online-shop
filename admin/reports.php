@@ -19,6 +19,10 @@ $top_customers = $pdo->query("
     LIMIT 5
 ")->fetchAll();
 ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80ab4c27ba0ff1489064c97c1d683542f2bda3b5
 <!DOCTYPE html>
 <html lang="en">
 <head>

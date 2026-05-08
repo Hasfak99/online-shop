@@ -10,7 +10,11 @@ if (!isset($_GET['id'])) {
 $id = $_GET['id'];
 
 // Fetch the product
+<<<<<<< HEAD
 $stmt = $pdo->prepare("SELECT * FROM products WHERE id = ? AND is_deleted = 0");
+=======
+$stmt = $pdo->prepare("SELECT * FROM products WHERE id = ?");
+>>>>>>> 80ab4c27ba0ff1489064c97c1d683542f2bda3b5
 $stmt->execute([$id]);
 $product = $stmt->fetch();
 
@@ -34,6 +38,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 // Fetch Categories for dropdown
 $categories = $pdo->query("SELECT * FROM categories")->fetchAll();
 ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80ab4c27ba0ff1489064c97c1d683542f2bda3b5
 <!DOCTYPE html>
 <html lang="en">
 <head>

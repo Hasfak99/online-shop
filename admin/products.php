@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         $stmt->execute([$_POST['name'], $_POST['description'], $_POST['price'], $_POST['stock'], $_POST['category_id']]);
         setFlash('Product added successfully', 'success');
     } elseif ($_POST['action'] === 'delete') {
+<<<<<<< HEAD
         try {
             // Soft Delete: Instead of removing the row, we mark it as deleted
             // This preserves order history for reports
@@ -18,6 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         } catch (PDOException $e) {
             setFlash('Error archiving product: ' . $e->getMessage(), 'error');
         }
+=======
+        $stmt = $pdo->prepare("DELETE FROM products WHERE id = ?");
+        $stmt->execute([$_POST['id']]);
+        setFlash('Product deleted', 'success');
+>>>>>>> 80ab4c27ba0ff1489064c97c1d683542f2bda3b5
     }
 }
 
@@ -29,10 +35,17 @@ $products = $pdo->query("
     SELECT p.*, c.name as category_name 
     FROM products p 
     LEFT JOIN categories c ON p.category_id = c.id
+<<<<<<< HEAD
     WHERE p.is_deleted = 0
     ORDER BY p.created_at DESC
 ")->fetchAll();
 ?>
+=======
+    ORDER BY p.created_at DESC
+")->fetchAll();
+?>
+
+>>>>>>> 80ab4c27ba0ff1489064c97c1d683542f2bda3b5
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -113,7 +126,11 @@ $products = $pdo->query("
                         <td><span style="color: <?php echo $p['stock_quantity'] < 10 ? 'var(--error)' : 'inherit'; ?>"><?php echo $p['stock_quantity']; ?></span></td>
                         <td>
                             <a href="edit_product.php?id=<?php echo $p['id']; ?>" style="color:var(--primary); margin-right: 10px; text-decoration: none;">Edit</a>
+<<<<<<< HEAD
                             <form method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this product?');">
+=======
+                            <form method="POST" style="display:inline;">
+>>>>>>> 80ab4c27ba0ff1489064c97c1d683542f2bda3b5
                                 <input type="hidden" name="action" value="delete">
                                 <input type="hidden" name="id" value="<?php echo $p['id']; ?>">
                                 <button type="submit" style="background:none; border:none; color:var(--error); cursor:pointer;">Delete</button>

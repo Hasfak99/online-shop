@@ -7,6 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     if ($_POST['action'] === 'delete' && isset($_POST['id'])) {
         // Prevent admin from deleting themselves
         if ($_POST['id'] != $_SESSION['user_id']) {
+<<<<<<< HEAD
             try {
                 $stmt = $pdo->prepare("DELETE FROM users WHERE id = ?");
                 $stmt->execute([$_POST['id']]);
@@ -14,6 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             } catch (PDOException $e) {
                 setFlash('Error deleting user: ' . $e->getMessage(), 'error');
             }
+=======
+            $stmt = $pdo->prepare("DELETE FROM users WHERE id = ?");
+            $stmt->execute([$_POST['id']]);
+            setFlash('User deleted successfully', 'success');
+>>>>>>> 80ab4c27ba0ff1489064c97c1d683542f2bda3b5
         } else {
             setFlash('You cannot delete your own account.', 'error');
         }
@@ -32,6 +38,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 // Fetch Users
 $users = $pdo->query("SELECT id, username, email, role, created_at FROM users ORDER BY created_at DESC")->fetchAll();
 ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80ab4c27ba0ff1489064c97c1d683542f2bda3b5
 <!DOCTYPE html>
 <html lang="en">
 <head>
